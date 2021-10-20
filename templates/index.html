@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Daily UI 001 Sign Up Form</title>
+  {% load static %}
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+  
+</head>
+
+<body>
+  <div class="signupSection">
+  <div class="info">
+    <h2></h2>
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <p></p>
+  </div>
+  <form action="#" method="POST" class="signupForm" name="signupform">
+    <h2>Prediction du chiffre d'affaire</h2>
+    <ul class="noBullet">
+        <li>
+        <form method="POST">
+            {% csrf_token %}
+             {{ form.as_p }}
+
+           <input type = "submit" value = "Submit">
+        </form>
+      </li>
+      <li>
+        <label for="Vente"></label>
+
+        {{nombre}}
+      </li>
+    </ul>
+  </form>
+</div>
+  
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>
